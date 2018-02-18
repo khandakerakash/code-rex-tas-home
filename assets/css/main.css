@@ -1,45 +1,443 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 
+body,
+html {
+    width: 100%;
+    height: 100%
+}
+
 body {
     font-family: 'Merriweather Sans', sans-serif !important;
 }
 
-.masthead {
+hr {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #4ac3e7;/*border-color: #f05f40*/
+}
+
+hr.light {
+    border-color: #fff
+}
+
+a {
+    /*color: #f05f40;*/
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s
+}
+
+a:hover {
+    color: #4ac3e7;/*color: #f05f40*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather Sans', sans-serif !important;
+}
+
+.bg-primary {
+    /*background-color: #f05f40!important*/
+}
+
+.bg-dark {
+    background-color: #212529!important
+}
+
+.text-faded {
+    color: rgba(255, 255, 255, .7)
+}
+
+section {
+    padding: 8rem 0
+}
+
+.section-heading {
+    margin-top: 0
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #212529;
+    text-shadow: none
+}
+
+::selection {
+    color: #fff;
+    background: #212529;
+    text-shadow: none
+}
+
+img::selection {
+    color: #fff;
+    background: 0 0
+}
+
+img::-moz-selection {
+    color: #fff;
+    background: 0 0
+}
+
+#mainNav {
+    border-bottom: 1px solid rgba(33, 37, 41, .1);
+    background-color: #fff;
+    font-family: 'Merriweather Sans', sans-serif !important;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s
+}
+
+#mainNav .navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(0,158,195,0.8);/*#f05f40*/
+    font-family: 'Merriweather Sans', sans-serif !important;
+}
+
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover {
+    color: #4ac3e7;/*#f05f40*/
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link,
+#mainNav .navbar-nav>li.nav-item>a.nav-link:focus {
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #212529
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link:focus:hover,
+#mainNav .navbar-nav>li.nav-item>a.nav-link:hover {
+    color: #4ac3e7;/*#f05f40*/
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active,
+#mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active {
+    color: #4ac3e7!important;/*#f05f40*//* color: #f05f40!important; */
+    background-color: transparent
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover,
+#mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active:hover {
+    background-color: transparent
+}
+
+@media (min-width:992px) {
+    #mainNav {
+        border-color: transparent;
+        background-color: transparent
+    }
+    #mainNav .navbar-brand {
+        color: rgba(255, 255, 255, .7)
+    }
+    #mainNav .navbar-brand:focus,
+    #mainNav .navbar-brand:hover {
+        color: #fff
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link {
+        padding: .5rem 1rem
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link,
+    #mainNav .navbar-nav>li.nav-item>a.nav-link:focus {
+        color: rgba(255, 255, 255, .7)
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link:focus:hover,
+    #mainNav .navbar-nav>li.nav-item>a.nav-link:hover {
+        color: #fff
+    }
+    #mainNav.navbar-shrink {
+        border-bottom: 1px solid rgba(33, 37, 41, .1);
+        background-color: #fff
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        color: #4ac3e7;/*#f05f40*/
+    }
+    #mainNav.navbar-shrink .navbar-brand:focus,
+    #mainNav.navbar-shrink .navbar-brand:hover {
+        color: #4ac3e7;/*#f05f40*/
+    }
+    #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link,
+    #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus {
+        color: #212529
+    }
+    #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover,
+    #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover {
+        color: #4ac3e7;/*#f05f40*/
+    }
+}
+
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
     background: linear-gradient(0deg,rgba(0,158,195,0.8),rgba(0,158,195,0.8)),url("../images/hero-bg.png") no-repeat center center;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    width: 100%;
-    height: 906px;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
 }
 
-.masthead p {
-    font-weight: 400!important;
+header.masthead hr {
+    margin-top: 30px;
+    margin-bottom: 30px
 }
 
-.masthead h1 {
-    font-weight: 300!important;
-    margin-bottom: 5px!important;
+header.masthead h1 {
+    font-size: 2rem;
+    font-family: 'Merriweather Sans', sans-serif !important;
+    font-weight: 400;
 }
 
-.masthead a {
+header.masthead p {
+    font-weight: 300;
+    font-family: 'Merriweather Sans', sans-serif !important;
+}
+
+header.masthead a {
     text-decoration-line: none;
     color: #444444;
     background: #FFFFFF;
     padding: 8px 20px;
+    margin: 10px 0!important;
     box-sizing: border-box;
     font-size: 18px;
     font-weight: 400!important;
     font-family: 'Open Sans', sans-serif;
 }
 
-.navbar-nav li {
-    margin-left: 10px!important;
+@media (min-width:768px) {
+    header.masthead p {
+        font-size: 1.0rem
+    }
 }
 
-.navbar-nav a {
-    font-size: 14px;
-    font-weight: 300!important;
+@media (min-width:992px) {
+    header.masthead {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0
+    }
+    header.masthead h1 {
+        font-size: 1.5rem
+    }
+}
+
+@media (min-width:1200px) {
+    header.masthead h1 {
+        font-size: 2rem
+    }
+}
+
+.full-box {
+    height: 300px;
+    background: #4ac3e7;
     color: #FFFFFF!important;
+    margin-top: -230px!important;
+    overflow: visible;
+    z-index: 9999;
+    -webkit-box-shadow:0px 4px 4px #6fc5c4;
+    -moz-box-shadow:0px 4px 4px #6fc5c4;
+    -o-box-shadow:0px 4px 4px #6fc5c4;
+    box-shadow:0px 4px 4px #6fc5c4;
+    margin-bottom: 80px;
+}
+
+.middle-box, .clinical-excellence {
+    background: #6fc5c4;
+    background: -webkit-linear-gradient(#6fc5c4, #d2cb68);
+    background: -moz-linear-gradient(#6fc5c4, #d2cb68);
+    background: -ms-linear-gradient(#6fc5c4, #d2cb68);
+    background: -o-linear-gradient(#6fc5c4, #d2cb68);
+    background: linear-gradient(#6fc5c4, #d2cb68);
+}
+
+.membership-box, .leadership-box {
+    padding-top: 7rem;
+    padding-bottom: calc(10rem - 56px);
+}
+
+.membership-box i, .leadership-box i {
+    font-size: 42px;
+}
+
+.membership-box h1, .readmore-box h1, .leadership-box h1 {
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 5px!important;
+}
+
+.readmore-box {
+    padding-top: 2rem;
+    padding-bottom: calc(10rem - 56px);
+}
+
+.readmore-box i {
+    font-size: 42px;
+}
+
+.readmore-box p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.readmore-box a {
+    letter-spacing: 3px!important;
+    text-transform: uppercase;
+    text-decoration-line: none!important;
+    color: #FFFFFF!important;
+}
+
+.readmore-box a i {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.what-we-do-text {
+   margin-bottom: 80px;
+}
+
+.what-we-do-text h1{
+    font-family: 'Merriweather Sans', sans-serif !important;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.what-we-do-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+/*.what-we-do-description {*/
+    /*margin-bottom: 100px;*/
+/*}*/
+
+.what-we-do-description h1{
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.education, .research {
+    background: #f0f6f8!important;
+    padding: 20px;
+}
+
+.education i, .research i {
+    font-size: 42px;
+    color: #6fc5c4;
+}
+
+.education h1, .research h1 {
+    color: #444444;
+    font-family: 'Merriweather Sans', sans-serif !important;
+    font-weight: 400;
+    margin-left: 50px!important;
+}
+
+
+.education p, .research p {
+    color: #6f8291;
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: 400;
+    margin-left: 52px!important;
+    text-align: justify;
+}
+
+.clinical-excellence {
+    padding: 32px;
+}
+
+.clinical-excellence i{
+    font-size: 42px;
+    color: #FFFFFF;
+}
+
+.clinical-excellence h1 {
+    color: #FFFFFF;
+    font-family: 'Merriweather Sans', sans-serif !important;
+    font-weight: 400;
+    margin-left: 60px;
+}
+
+.clinical-excellence p{
+    color: #f3f2f2;
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: 400;
+    margin-left: 62px;
+    text-align: justify;
+}
+
+#event-section {
+    background: #f1f4f5;
+}
+
+
+.our-events h1, .our-books h1 {
+    color: #444444;
+    font-family: 'Merriweather Sans', sans-serif !important;
+    font-weight: 400;
+}
+
+.our-events p, .our-books p {
+    color: #6f8291;
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.first-event {
+    background: url("../images/first-event.png") no-repeat;
+    height: 215px;
+    width: 348px;
+}
+
+.second-event {
+    background: url("../images/adult-ccrn.png") no-repeat;
+    height:  215px;
+    width: 348px;
+}
+
+.first-event a, .second-event a {
+    background: #f9ac59!important;
+    padding: 8px;
+    border-radius: 3px;
+    text-decoration-line: none;
+    margin-top: 11rem;
+    margin-bottom: calc(10rem - 56px);
+}
+
+.first-event span, .second-event span {
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.first-event-text p, .second-event-text p {
+    margin-top: 50px;
+    color: #6f8291;
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: 400;
+}
+
+.first-event-text h2, .second-event-text h2 {
+    color: #444444;
+    font-family: 'Merriweather Sans', sans-serif !important;
+    font-weight: 400;
+    font-size: 20px!important;
+    /*text-align: match-parent;*/
+    text-align: justify;
+}
+
+.first-event-text h3, .second-event-text h3 {
+    margin-top: 20px;
+    color: #6f8291!important;
+    font-family: 'Merriweather Sans', sans-serif !important;
+    font-weight: 400;
+    font-size: 18px!important;
+    text-align: justify;
 }
